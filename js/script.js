@@ -53,16 +53,22 @@ document.documentElement.addEventListener("click", function (e) {
 
 
 //МЕНЮ-БУРГЕР
-const touch = document.querySelector('.header__touch');
 const burger = document.querySelector('.header__burger');
 const menu = document.querySelector('.header__menu');
-if (touch) {
-	touch.addEventListener('click', function () {
+const text = document.querySelector('.header__text');
+if (burger) {
+	burger.addEventListener('click', function () {
+		document.body.classList.toggle('_lock');
+		burger.classList.toggle('_active');
+		menu.classList.toggle('_active');
+	});
+	text.addEventListener('click', function () {
 		document.body.classList.toggle('_lock');
 		burger.classList.toggle('_active');
 		menu.classList.toggle('_active');
 	})
 }
+
 
 /*//НАВИГАЦИЯ
 const menuLinks = document.querySelectorAll(".nav__link[data-goto]");
