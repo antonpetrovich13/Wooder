@@ -69,8 +69,8 @@ body {
 
 @font-face {
   font-family: "ProximaNova";
-  src: url("../../fonts/Mark Simonson - Proxima Nova Bold.eot");
-  src: local("☺"), url("../../fonts/Mark Simonson - Proxima Nova Bold.woff") format("woff"), url("../../fonts/Mark Simonson - Proxima Nova Bold.ttf") format("truetype"), url("../../fonts/Mark Simonson - Proxima Nova Bold.svg") format("svg");
+  src: url("../fonts/Mark Simonson - Proxima Nova Bold.eot");
+  src: local("☺"), url("../fonts/Mark Simonson - Proxima Nova Bold.woff") format("woff"), url("../fonts/Mark Simonson - Proxima Nova Bold.ttf") format("truetype"), url("../fonts/Mark Simonson - Proxima Nova Bold.svg") format("svg");
   font-weight: 700;
   font-style: normal; }
 
@@ -154,7 +154,7 @@ body {
       position: absolute;
       width: 100%;
       height: 1px;
-      top: 9px;
+      top: 8.5px;
       left: 0;
       background-color: #bea67c; }
     .header__burger:after {
@@ -228,3 +228,130 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.025em;
     color: #000; }
+  .header__logo-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .header__logo {
+    position: relative;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: #ffffff; }
+    .header__logo:hover:before {
+      top: -5%; }
+    .header__logo:before {
+      content: "";
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+      width: 64px;
+      height: 4px;
+      background-color: #bea67c;
+      position: absolute;
+      top: 45%;
+      left: 20%;
+      -webkit-transform: translate(0, -45%);
+      -ms-transform: translate(0, -45%);
+      transform: translate(0, -45%); }
+  .header__main-menu {
+    margin: 0px 0px 0px 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .header__main-menu li {
+      list-style: none;
+      margin: 0px 50px; }
+      .header__main-menu li:first-child {
+        margin: 0px 50px 0px 0px; }
+      .header__main-menu li:last-child {
+        margin: 0px 0px 0px 50px; }
+  .header__main-link {
+    position: relative;
+    opacity: 0.5;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: #ffffff; }
+    .header__main-link:hover:before {
+      opacity: 1;
+      top: 95%; }
+    .header__main-link:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: 50%;
+      left: 0;
+      background-color: #bea67c;
+      opacity: 0;
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s; }
+  .header__communication {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .header__info {
+    position: relative; }
+  .header__image {
+    cursor: pointer; }
+    .header__image:hover ~ .header__info-text {
+      -webkit-transform: translate(0, 10px) scale(1);
+      -ms-transform: translate(0, 10px) scale(1);
+      transform: translate(0, 10px) scale(1); }
+  .header__info-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    right: 0;
+    width: 250px;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    -webkit-transform: translate(0, 10px) scale(0);
+    -ms-transform: translate(0, 10px) scale(0);
+    transform: translate(0, 10px) scale(0); }
+    .header__info-text p {
+      position: relative;
+      z-index: 2;
+      color: #bea67c;
+      font-size: 18px;
+      line-height: 20px;
+      text-align: center; }
+    .header__info-text span {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      border-radius: 5px; }
+  .header__languages {
+    margin: 0px 0px 0px 52px; }
