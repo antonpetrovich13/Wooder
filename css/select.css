@@ -34,6 +34,7 @@
 	background: url("../img/header/arrow.png") center no-repeat;
 }
 .select__options {
+	display: none;
 	font-size: 15px;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
@@ -43,7 +44,6 @@
 	min-width: 100%;
 	left: 0;
 	font-size: 16px;
-	display: block;
 	margin: 15px 0px 0px 0px;
 }
 .select__option {
@@ -58,6 +58,7 @@
 	transform: rotate(-180deg);
 }
 .select._active.select__options {
+	display: block;
 }
 
 @media (max-width: 430px) {

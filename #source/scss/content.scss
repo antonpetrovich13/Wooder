@@ -1,0 +1,14 @@
+.main {
+	position: relative;
+	padding: 380px 0px;
+	background: url("../img/main/01.png") left no-repeat;
+	//background-size: cover;
+	&__1 {
+		position: absolute;
+		width: 46%;
+		height: 120%;
+		top: 0;
+		right: 0;
+		background: url("../img/main/02.png") center no-repeat;
+	}
+}
