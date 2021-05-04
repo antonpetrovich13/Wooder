@@ -101,13 +101,20 @@ if (menuLinks.length > 0) {
 
 //СЛАЙДЕР MAIN
 let swiper = new Swiper('.main__slider', {
-	speed: 500,
+	speed: 800,
 	direction: 'vertical',
 	mousewheel: true,
+	autoplay: true,
 	pagination: {
 		el: ".main__pagination",
 		clickable: true,
-	}
+	},
+	breakpoints: {
+		660: {
+			mousewheel: false,
+			draggable: false,
+		},
+	},
 });
 
 /*
