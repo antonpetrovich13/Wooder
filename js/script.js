@@ -103,17 +103,12 @@ if (menuLinks.length > 0) {
 let swiper = new Swiper('.main__slider', {
 	speed: 800,
 	direction: 'vertical',
-	mousewheel: true,
 	autoplay: true,
+	mousewheel: true,
+	loop: true,
 	pagination: {
 		el: ".main__pagination",
 		clickable: true,
-	},
-	breakpoints: {
-		660: {
-			mousewheel: false,
-			draggable: false,
-		},
 	},
 });
 
