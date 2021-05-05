@@ -1,2 +1,1 @@
-//@prepros-append script.js
-
+//@prepros-append jquery.js
