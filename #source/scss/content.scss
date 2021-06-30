@@ -457,3 +457,131 @@
 		top: 5%;
 	}
 }
+
+//  <DESCRIPTION>  =====================================================
+
+.description {
+	padding: 90px 0px;
+	&__body {
+	}
+
+	&__block {
+		position: relative;
+	}
+
+	&__wrapper {
+		display: flex;
+		position: relative;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__column {
+		flex: 0 1 38%;
+		&_img {
+			flex: 0 1 616px;
+			& img {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&__number {
+		display: none;
+		visibility: hidden;
+	}
+}
+.info {
+	&__title {
+		font-size: 48px;
+		text-transform: uppercase;
+		letter-spacing: 0.07em;
+		color: #010101;
+	}
+
+	&__text {
+		max-width: 370px;
+		margin: 28px 0px 32px 0px;
+		font-size: 15px;
+		line-height: 25px;
+		letter-spacing: 0.025em;
+		color: #464646;
+	}
+
+	&__button {
+	}
+}
+.lrn {
+	text-align: left;
+	display: block;
+	width: 120px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	&:hover {
+		& p {
+			&:after {
+				opacity: 1;
+				top: 50%;
+				right: -41px;
+			}
+			&:before {
+				opacity: 1;
+				top: 20%;
+				right: -41px;
+			}
+			& span {
+				opacity: 1;
+				top: 74%;
+				right: -42px;
+			}
+		}
+	}
+	& p {
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		color: #000000;
+		position: relative;
+		&:after {
+			transition: all 0.3s ease 0s;
+			content: "";
+			opacity: 0;
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			width: 33px;
+			height: 1px;
+			background-color: #bea67c;
+			transform: translate(0, -50%);
+		}
+		&:before {
+			transition: all 0.3s ease 0s;
+			opacity: 0;
+			content: "";
+			display: block;
+			position: absolute;
+			width: 8px;
+			height: 1px;
+			top: 20%;
+			right: 0;
+			background-color: #bea67c;
+			transform: rotate(45deg);
+		}
+		& span {
+			transition: all 0.3s ease 0s;
+			opacity: 0;
+			display: block;
+			position: absolute;
+			width: 8px;
+			height: 1px;
+			top: 74%;
+			right: 0;
+			background-color: #bea67c;
+			transform: rotate(-45deg);
+		}
+	}
+}
