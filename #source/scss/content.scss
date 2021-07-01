@@ -251,7 +251,7 @@
 				}
 				& span {
 					opacity: 1;
-					top: 53%;
+					top: 54%;
 					right: -42px;
 				}
 			}
@@ -325,6 +325,12 @@
 		}
 	}
 
+	&__link {
+		width: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 	&__arrow {
 		margin: 23px 0px 0px 0px;
 		position: relative;
@@ -336,8 +342,8 @@
 			position: absolute;
 			width: 1px;
 			height: 8px;
-			bottom: 0;
-			left: 3.5px;
+			bottom: -2px;
+			left: 2.5px;
 			background-color: #fff;
 			transform: rotate(45deg);
 		}
@@ -346,8 +352,8 @@
 			position: absolute;
 			width: 1px;
 			height: 8px;
-			bottom: 0;
-			left: -3px;
+			bottom: -2px;
+			left: -2.5px;
 			background-color: #fff;
 			transform: rotate(-45deg);
 		}
@@ -461,7 +467,7 @@
 //  <DESCRIPTION>  =====================================================
 
 .description {
-	padding: 90px 0px;
+	padding: 120px 0px;
 	&__body {
 	}
 
@@ -477,7 +483,7 @@
 	}
 
 	&__column {
-		flex: 0 1 38%;
+		margin: 0px 43px;
 		&_img {
 			flex: 0 1 616px;
 			& img {
@@ -493,19 +499,40 @@
 }
 .info {
 	&__title {
+		position: relative;
 		font-size: 48px;
 		text-transform: uppercase;
 		letter-spacing: 0.07em;
 		color: #010101;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 151px;
+			height: 1px;
+			top: 50%;
+			left: -178px;
+			background-color: #000;
+			transform: translate(0, -50%);
+		}
 	}
 
 	&__text {
+		position: relative;
 		max-width: 370px;
 		margin: 28px 0px 32px 0px;
 		font-size: 15px;
 		line-height: 25px;
 		letter-spacing: 0.025em;
 		color: #464646;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 10px;
+			left: -73px;
+			width: 44px;
+			height: 4px;
+			background-color: #bea67c;
+		}
 	}
 
 	&__button {
@@ -519,6 +546,17 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	position: relative;
+	padding: 0px 0px 9px 0px;
+	&:after {
+		content: "";
+		position: absolute;
+		width: 44px;
+		height: 2px;
+		bottom: 0px;
+		left: 3px;
+		background-color: #a9946e;
+	}
 	&:hover {
 		& p {
 			&:after {
@@ -528,12 +566,12 @@
 			}
 			&:before {
 				opacity: 1;
-				top: 20%;
-				right: -41px;
+				top: 30%;
+				right: -42px;
 			}
 			& span {
 				opacity: 1;
-				top: 74%;
+				top: 60%;
 				right: -42px;
 			}
 		}
@@ -564,7 +602,7 @@
 			content: "";
 			display: block;
 			position: absolute;
-			width: 8px;
+			width: 6px;
 			height: 1px;
 			top: 20%;
 			right: 0;
@@ -576,7 +614,7 @@
 			opacity: 0;
 			display: block;
 			position: absolute;
-			width: 8px;
+			width: 6px;
 			height: 1px;
 			top: 74%;
 			right: 0;
