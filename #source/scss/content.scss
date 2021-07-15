@@ -1070,21 +1070,37 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		&:hover {
+			& a > img:first-child {
+				transition: all 0.3s ease 0s;
+				transform: scale(1.02);
+			}
+			&:after {
+				width: 244px;
+				height: 244px;
+			}
+		}
+		& a > img:first-child {
+			display: block;
+			transition: all 0.3s ease 0s;
+		}
 		&:after {
 			content: "";
+			display: block;
 			position: absolute;
 			border-radius: 50%;
 			width: 272px;
 			height: 272px;
 			border: 1px solid #e1e1e1;
+			transition: all 0.5s ease 0s;
 			//animation: circle 2s linear infinite normal running 0s backwards;
 		}
 	}
 
-	@keyframes circle {
+	/*@keyframes circle {
 		0% {
-			width: 244px;
-			height: 244px;
+			width: 247px;
+			height: 247px;
 			border: 1px solid #e1e1e1;
 		}
 		100% {
@@ -1092,7 +1108,7 @@
 			height: 292px;
 			border: 1px solid #e1e1e10e;
 		}
-	}
+	}*/
 
 	&__link {
 		z-index: 3;
