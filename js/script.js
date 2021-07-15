@@ -1,3 +1,34 @@
+
+//НАВИГАЦИЯ
+const menuLinks = document.querySelectorAll(".lnk");
+if (menuLinks.length > 0) {
+	menuLinks.forEach(menuLink => {
+		menuLink.addEventListener("click", onMenuLinkClick);
+	});
+
+	function onMenuLinkClick(e) {
+		const menuLink = e.target;
+		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+			const goToBlock = document.querySelector(menuLink.dataset.goto);
+			const goToBlockValue = goToBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header').offsetHeight;
+
+			if (burger.classList.contains('_active')) {
+				document.body.classList.remove('_lock');
+				burger.classList.remove('_active');
+				menu.classList.remove('_active');
+			}
+
+			window.scrollTo({
+				top: goToBlockValue,
+				behavior: "smooth"
+			});
+			e.preventDefault();
+		}
+	}
+}
+
+
+
 //АНИМАЦИЯ ПРИ СКРОЛЛЕ
 /*const animItems = document.querySelectorAll('._anim-items');
 
@@ -70,34 +101,6 @@ if (burger) {
 }
 
 
-/*//НАВИГАЦИЯ
-const menuLinks = document.querySelectorAll(".nav__link[data-goto]");
-if (menuLinks.length > 0) {
-	menuLinks.forEach(menuLink => {
-		menuLink.addEventListener("click", onMenuLinkClick);
-	});
-
-	function onMenuLinkClick(e) {
-		const menuLink = e.target;
-		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-			const goToBlock = document.querySelector(menuLink.dataset.goto);
-			const goToBlockValue = goToBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header').offsetHeight;
-
-			if (burgerMenu.classList.contains('_active')) {
-				document.body.classList.remove('_lock');
-				burgerMenu.classList.remove('_active');
-				menu.classList.remove('_active');
-			}
-
-			window.scrollTo({
-				top: goToBlockValue,
-				behavior: "smooth"
-			});
-			e.preventDefault();
-		}
-	}
-}
-*/
 
 //СЛАЙДЕР MAIN
 let swiper = new Swiper('.main__slider', {
