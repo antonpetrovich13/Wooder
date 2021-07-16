@@ -1219,3 +1219,77 @@
 		}
 	}
 }
+
+//  <RECTANGLE>  =====================================================
+.rectangle {
+	background: url("../img/rectangle/01.png") center no-repeat;
+	background-size: cover;
+	position: relative;
+	height: 916px;
+	&__container {
+		/*padding: 48px 0px;
+		margin: 0px 110px;
+		max-width: 1698px;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;*/
+		position: absolute;
+		width: 865px;
+		height: 832px;
+		top: 48px;
+		right: 5.72%;
+	}
+
+	&__image {
+		flex: 0 0 865px;
+		& img {
+			opacity: 0.03;
+			max-width: 100%;
+		}
+	}
+
+	&__container-2 {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 90px;
+		left: 10%;
+	}
+
+	&__bigrectangle {
+		width: 80.5%;
+		height: 737px;
+		border: 1px solid #bea67c;
+	}
+
+	&__body {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 306px;
+		left: 0;
+	}
+
+	&__firsline {
+	}
+
+	&__bigline {
+	}
+
+	&__title {
+	}
+
+	&__secondline {
+	}
+
+	&__smallline {
+	}
+
+	&__text {
+	}
+
+	&__button {
+	}
+}
+.container {
+}
