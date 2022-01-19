@@ -27,6 +27,47 @@ if (menuLinks.length > 0) {
 	}
 }
 
+//МЕНЮ-БУРГЕР
+const burger = document.querySelector('.header__burger');
+const menu = document.querySelector('.header__menu');
+const text = document.querySelector('.header__text');
+if (burger) {
+	burger.addEventListener('click', function () {
+		document.body.classList.toggle('_lock');
+		burger.classList.toggle('_active');
+		menu.classList.toggle('_active');
+	});
+	text.addEventListener('click', function () {
+		document.body.classList.toggle('_lock');
+		burger.classList.toggle('_active');
+		menu.classList.toggle('_active');
+	})
+}
+
+//ПОКАЗ ПЛАШКИ ДЛЯ HEADER
+document.addEventListener('scroll', function (event) {
+	const headerElement = document.querySelector('.header__wrapper');
+
+	if (window.pageYOffset > headerElement.offsetHeight) {
+		headerElement.classList.add('_color');
+	} else {
+		headerElement.classList.remove('_color');
+	}
+})
+
+//СЛАЙДЕР MAIN
+let swiper = new Swiper('.main__slider', {
+	speed: 800,
+	direction: 'vertical',
+	autoplay: true,
+	mousewheel: true,
+	loop: true,
+	pagination: {
+		el: ".main__pagination",
+		clickable: true,
+	},
+});
+
 
 
 //АНИМАЦИЯ ПРИ СКРОЛЛЕ
@@ -83,37 +124,11 @@ document.documentElement.addEventListener("click", function (e) {
 */
 
 
-//МЕНЮ-БУРГЕР
-const burger = document.querySelector('.header__burger');
-const menu = document.querySelector('.header__menu');
-const text = document.querySelector('.header__text');
-if (burger) {
-	burger.addEventListener('click', function () {
-		document.body.classList.toggle('_lock');
-		burger.classList.toggle('_active');
-		menu.classList.toggle('_active');
-	});
-	text.addEventListener('click', function () {
-		document.body.classList.toggle('_lock');
-		burger.classList.toggle('_active');
-		menu.classList.toggle('_active');
-	})
-}
 
 
 
-//СЛАЙДЕР MAIN
-let swiper = new Swiper('.main__slider', {
-	speed: 800,
-	direction: 'vertical',
-	autoplay: true,
-	mousewheel: true,
-	loop: true,
-	pagination: {
-		el: ".main__pagination",
-		clickable: true,
-	},
-});
+
+
 
 /*
 //СЛАЙДЕР QUOTES
