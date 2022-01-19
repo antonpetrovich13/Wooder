@@ -44,6 +44,8 @@ if (burger) {
 	})
 }
 
+
+
 //ПОКАЗ ПЛАШКИ ДЛЯ HEADER
 document.addEventListener('scroll', function (event) {
 	const headerElement = document.querySelector('.header__wrapper');
