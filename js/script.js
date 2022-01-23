@@ -45,6 +45,20 @@ if (burger) {
 	})
 }
 
+document.addEventListener('click', function (event) {
+	if (burger.className.includes('_active')) {
+		closeBurgerMenu();
+	}
+
+	function closeBurgerMenu() {
+		if (event.target != burger && event.target != text && event.target != menu) {
+			burger.classList.toggle('_active');
+			menu.classList.toggle('_active');
+			document.body.classList.toggle('_lock');
+		}
+	};
+})
+
 
 
 
