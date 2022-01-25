@@ -285,7 +285,7 @@ body {
     letter-spacing: 0.3em;
     color: #ffffff; }
     .header__logo:hover:before {
-      top: -5%; }
+      top: 20%; }
     .header__logo:before {
       content: "";
       -webkit-transition: all 0.3s ease 0s;
