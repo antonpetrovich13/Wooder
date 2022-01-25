@@ -1,0 +1,65 @@
+// <ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ> ============================================================================
+@import "nullstyle.scss";
+body {
+	font-size: 14px;
+	color: #000;
+	font-family: "ProximaNova";
+	font-weight: 700;
+	&._lock {
+		min-width: auto;
+		//overflow: hidden;
+		@media (max-width: 450px) {
+			overflow: hidden;
+		}
+	}
+}
+
+// <ПОДКЛЮЧЕНИЕ ШРИФТОВ> ====================================================================================
+@font-face {
+	font-family: "ProximaNova";
+	src: url("../fonts/Mark Simonson - Proxima Nova Bold.eot");
+	src: local("☺"), url("../fonts/Mark Simonson - Proxima Nova Bold.woff") format("woff"),
+		url("../fonts/Mark Simonson - Proxima Nova Bold.ttf") format("truetype"),
+		url("../fonts/Mark Simonson - Proxima Nova Bold.svg") format("svg");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "ProximaNova";
+	src: url("../fonts/Mark Simonson - Proxima Nova Extra Condensed Regular.eot");
+	src: local("☺"), url("../fonts/Mark Simonson - Proxima Nova Extra Condensed Regular.woff") format("woff"),
+		url("../fonts/Mark Simonson - Proxima Nova Extra Condensed Regular.ttf") format("truetype"),
+		url("../fonts/Mark Simonson - Proxima Nova Extra Condensed Regular.svg") format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+
+// <ОБОЛОЧКА, КОНТЕЙНЕР> ====================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	flex: 1 1 auto;
+}
+
+.container {
+	max-width: 1260px;
+	margin: 0px auto;
+	padding: 0px 15px;
+	&_rec {
+		margin: 0;
+	}
+}
+
+// <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ> ===============================================================================
+@import "header.scss";
+@import "content.scss";
+@import "footer.scss";
+
+// <ОСНОВНОЙ БЛОК> ============================================================================================

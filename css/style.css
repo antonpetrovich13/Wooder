@@ -2091,3 +2091,82 @@ body {
     margin: 25px auto 30px auto; }
   .info__button_abt {
     margin: 0px auto; } }
+
+.footer {
+  background: url("../img/footer/01.png") center no-repeat;
+  background-size: cover;
+  padding: 14px 0px; }
+  .footer__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .footer__year {
+    font-size: 15px;
+    letter-spacing: 0.025em;
+    color: #464646; }
+  .footer__logo {
+    position: relative;
+    font-size: 30.1px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: #ffffff; }
+    .footer__logo:hover:before {
+      top: 25%; }
+    .footer__logo:before {
+      content: "";
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+      width: 54px;
+      height: 4px;
+      background-color: #bea67c;
+      position: absolute;
+      top: 45%;
+      left: 19.7%;
+      -webkit-transform: translate(0, -45%);
+      -ms-transform: translate(0, -45%);
+      transform: translate(0, -45%); }
+  .footer__author {
+    color: #7d7d7d; }
+    .footer__author span {
+      font-size: 15px;
+      letter-spacing: 0.025em;
+      color: #464646; }
+  @media (max-width: 770px) {
+    .footer__wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+      justify-content: stretch; }
+    .footer__column_1 {
+      -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+      order: 3; }
+    .footer__column_3 {
+      margin: 12px 0px; }
+    .footer__logo {
+      font-size: 24px; }
+      .footer__logo:before {
+        content: "";
+        -webkit-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+        width: 40px;
+        height: 3px;
+        background-color: #bea67c;
+        position: absolute;
+        top: 45%;
+        left: 20.5%;
+        -webkit-transform: translate(0, -45%);
+        -ms-transform: translate(0, -45%);
+        transform: translate(0, -45%); } }
