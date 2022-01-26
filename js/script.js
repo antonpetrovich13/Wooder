@@ -11,7 +11,7 @@ if (menuLinks.length > 0) {
 		const menuLink = e.target;
 		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
 			const goToBlock = document.querySelector(menuLink.dataset.goto);
-			const goToBlockValue = goToBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header').offsetHeight;
+			const goToBlockValue = goToBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header__wrapper').offsetHeight;
 
 			if (burger.classList.contains('_active')) {
 				document.body.classList.remove('_lock');
@@ -45,6 +45,8 @@ if (burger) {
 	})
 }
 
+
+//ЗАКРЫТИЕ БУРГЕРА ПРИ КЛИКЕ ЗА ЕГО ПРЕДЕЛАМИ
 document.addEventListener('click', function (event) {
 	if (burger.className.includes('_active')) {
 		closeBurgerMenu();
@@ -60,9 +62,6 @@ document.addEventListener('click', function (event) {
 })
 
 
-
-
-
 //ПОКАЗ ПЛАШКИ ДЛЯ HEADER
 document.addEventListener('scroll', function (event) {
 	const headerElement = document.querySelector('.header__wrapper');
@@ -73,6 +72,7 @@ document.addEventListener('scroll', function (event) {
 		headerElement.classList.remove('_color');
 	}
 })
+
 
 //СЛАЙДЕР MAIN
 let swiper = new Swiper('.main__slider', {
@@ -86,6 +86,19 @@ let swiper = new Swiper('.main__slider', {
 		clickable: true,
 	},
 });
+
+
+//ИЗМЕНЕНИЕ BACKGROUND ДЛЯ ИНФОРМАЦИОННОЙ ИКОНКИ
+const infoElement = document.querySelector('.header__info-text');
+const mainElement = document.querySelector('.main');
+
+document.addEventListener('scroll', function (event) {
+	if (window.pageYOffset > mainElement.offsetHeight - (document.querySelector('.header').offsetHeight * 2)) {
+		infoElement.lastElementChild.style.background = '#6d5d41';
+	} else {
+		infoElement.lastElementChild.style.background = '';
+	}
+})
 
 
 
@@ -149,89 +162,8 @@ document.documentElement.addEventListener("click", function (e) {
 
 
 
-/*
-//СЛАЙДЕР QUOTES
-let quotes = new Swiper('.quotes__slider', {
-	speed: 800,
-	loop: true,
-	effect: 'flip',
-	navigation: {
-		nextEl: '.quotes__arrow',
-	},
-});
-
-let anim = document.querySelector(".quotes__bottom");
-anim.addEventListener("click", function () {
-	let arrow = document.querySelector(".quotes__img");
-	arrow.classList.add('_active');
-})
-
-anim.addEventListener("transitionend", function () {
-	let arrow = document.querySelector(".quotes__img");
-	arrow.classList.remove('_active');
-})
-*/
 
 
-/*
-// ВАЛИДАЦИЯ ФОРМЫ
 
-document.addEventListener('DOMContentLoaded', function () {
-	const form = document.getElementById('form');
-	form.addEventListener('submit', formSend);
-	async function formSend(e) {
-		e.preventDefault();
 
-		let error = formValidate(form);
-		let formData = new FormData(form);
-
-		if (error === 0) {
-			form.classList.add('_sending');
-			let response = await fetch('sendmail.php', {
-				method: 'POST',
-				body: formData
-			});
-			if (response.ok) {
-				let result = await response.json();
-				alert(result.message);
-				form.reset();
-				form.classList.remove('_sending');
-			} else {
-				alert("Ошибка");
-				form.classList.remove('_sending');
-			}
-		} else {
-			alert('Заполните обязательные поля');
-		}
-	}
-
-	function formValidate(form) {
-		let error = 0;
-		let formReq = document.querySelectorAll('._req');
-
-		for (let index = 0; index < formReq.length; index++) {
-			const input = formReq[index];
-			formRemoveError(input);
-			if (input.value === '') {
-				formAddError(input);
-				error++;
-			}
-		}
-		return error;
-	}
-	function formAddError(input) {
-		input.parentElement.classList.add('_error');
-		input.classList.add('_error');
-	}
-	function formRemoveError(input) {
-		input.parentElement.classList.remove('_error');
-		input.classList.remove('_error');
-	}
-
-	//Функция теста телефона
-	function phoneTest(input) {
-		return !/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(input.value);
-	}
-});
-*/
 
