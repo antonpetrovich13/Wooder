@@ -7,11 +7,11 @@ body {
 	font-weight: 700;
 	&._lock {
 		min-width: auto;
-		//overflow: hidden;
 		@media (max-width: 450px) {
 			overflow: hidden;
 		}
 	}
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 // <ПОДКЛЮЧЕНИЕ ШРИФТОВ> ====================================================================================
