@@ -110,7 +110,7 @@ document.addEventListener('click', function (event) {
 
 	function activeLink(elem) {
 		if (elem.getAttribute('data-value') == 'ru') {
-			window.location.href = '../index_ru.html'
+			window.location.href = 'index_ru.html'
 		} else {
 			window.location.href = '../index.html'
 		}
