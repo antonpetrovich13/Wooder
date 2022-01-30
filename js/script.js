@@ -112,7 +112,7 @@ document.addEventListener('click', function (event) {
 		if (elem.getAttribute('data-value') == 'ru') {
 			window.location.href = 'index_ru.html'
 		} else {
-			window.location.href = '../index.html'
+			window.location.href = 'index.html'
 		}
 	}
 
