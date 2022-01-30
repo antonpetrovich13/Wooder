@@ -101,6 +101,24 @@ document.addEventListener('scroll', function (event) {
 })
 
 
+//СМЕНА ЯЗЫКА
+document.addEventListener('click', function (event) {
+
+	if (event.target.className === 'select__option') {
+		activeLink(event.target);
+	}
+
+	function activeLink(elem) {
+		if (elem.getAttribute('data-value') == 'ru') {
+			window.location.href = '../index_ru.html'
+		} else {
+			window.location.href = '../index.html'
+		}
+	}
+
+})
+
+
 
 //АНИМАЦИЯ ПРИ СКРОЛЛЕ
 /*const animItems = document.querySelectorAll('._anim-items');
