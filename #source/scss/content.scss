@@ -1217,10 +1217,10 @@
 			line-height: 48px;
 		}
 	}
-	@media (max-width: 400px) {
+	@media (max-width: 450px) {
 		&__title {
-			font-size: 36px;
-			line-height: 42px;
+			font-size: 34px;
+			line-height: 38px;
 			&:after {
 				content: "";
 				bottom: -20px;
@@ -1307,6 +1307,9 @@
 		text-transform: uppercase;
 		letter-spacing: 0.025em;
 		color: #bea67c;
+		&_ru {
+			max-width: 600px;
+		}
 	}
 
 	&__secondline {
@@ -1400,6 +1403,9 @@
 			max-width: 420px;
 			font-size: 38px;
 			line-height: 45px;
+			&_ru {
+				max-width: 550px;
+			}
 		}
 
 		&__secondline {
@@ -1596,6 +1602,9 @@
 			line-height: 32px;
 			margin: 20px auto 0px auto;
 			text-align: center;
+			&_ru {
+				line-height: 36px;
+			}
 		}
 
 		&__secondline {
