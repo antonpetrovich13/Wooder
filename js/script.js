@@ -138,14 +138,12 @@ for (let slide of mainSlide) {
 	}, 1)
 }
 
+//ОТМЕНА ПЕРЕХОДА ПО ССЫЛКЕ ПРИ КОПИРОВАНИИ URL
+const mainShare = document.querySelector('.main__share');
 
-
-
-
-
-
-
-
+mainShare.onclick = function (event) {
+	event.preventDefault();
+}
 
 //АНИМАЦИЯ ПРИ СКРОЛЛЕ
 /*const animItems = document.querySelectorAll('._anim-items');
@@ -185,20 +183,10 @@ if (animItems.length > 0) {
 	}, 300);
 }
 */
-/*
-//ВЫПАДАЮЩЕЕ МЕНЮ
-let user = document.querySelector(".user__wrapper");
-let drop = document.querySelector(".drop-down");
-user.addEventListener("click", function (e) {
-	drop.classList.toggle("_active");
-});
 
-document.documentElement.addEventListener("click", function (e) {
-	if (!e.target.closest('.user')) {
-		drop.classList.remove("_active");
-	}
-});
-*/
+
+
+
 
 
 
