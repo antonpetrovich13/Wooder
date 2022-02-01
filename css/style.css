@@ -511,7 +511,6 @@ body {
       right: -20%; } }
 
 .main {
-  background: url("../img/main/01.png") 0 0 no-repeat;
   position: relative; }
   .main__photos {
     position: relative; }
