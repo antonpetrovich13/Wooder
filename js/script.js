@@ -118,6 +118,33 @@ document.addEventListener('click', function (event) {
 
 })
 
+//СМЕНА ЦИФРЫ ПРИ СМЕНЕ СЛАЙДА СЛАЙДЕРА
+const mainSlide = document.querySelectorAll('.main__slide');
+const mainNumber = document.querySelector('.main__number');
+
+for (let slide of mainSlide) {
+
+	setInterval(function () {
+		if (slide.className.includes('active')) {
+
+			let imageNumber = slide.getAttribute('data-swiper-slide-index');
+
+			if (imageNumber < 10) {
+				mainNumber.innerHTML = '0' + ++imageNumber;
+			} else {
+				mainNumber.innerHTML = imageNumber;
+			}
+		}
+	}, 1)
+}
+
+
+
+
+
+
+
+
 
 
 //АНИМАЦИЯ ПРИ СКРОЛЛЕ
