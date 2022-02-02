@@ -146,7 +146,7 @@ mainShare.onclick = function (event) {
 }
 
 //АНИМАЦИЯ ПРИ СКРОЛЛЕ
-/*const animItems = document.querySelectorAll('._anim-items');
+const animItems = document.querySelectorAll('._anim-items');
 
 if (animItems.length > 0) {
 	window.addEventListener('scroll', animOnScroll);
@@ -180,9 +180,8 @@ if (animItems.length > 0) {
 
 	setTimeout(() => {
 		animOnScroll();
-	}, 300);
+	}, 500);
 }
-*/
 
 
 
